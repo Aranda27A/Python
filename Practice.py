@@ -70,42 +70,7 @@ print(password)
 
 
 #******----------------------------------------
-#Hangman 
 
-word = ["abraham" ,"solaris" ,"jueputa"]
-
-chooseWord = random.choice(word)
-print(chooseWord)
-sizeLetter = len(chooseWord)
-userchart = ""
-
-for space in range(sizeLetter):
-     userchart += "_"
-print(userchart)  
-
-
-gameOver = False
-
-
-while not gameOver:
-      display = ""
-      userSelection = input("Guess the char of the letter: ").lower()
-
-      for char in chooseWord:
-
-            if  userSelection == char:
-                display += char
-
-
-
-            else:
-                display += "_"
-                gameOver = True
-                          
-print(display)
-          
-
- 
-          
+    
 
 
