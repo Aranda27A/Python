@@ -1,4 +1,5 @@
 #Hangman 
+import random
 
 word = ["abraham" ,"solaris" ,"jueputa"]
 
@@ -19,6 +20,14 @@ life = 3
 while not gameOver:
     display = ""
     userSelection = input("Guess the char of the letter: ").lower()
+
+    if userSelection in Guessletter:
+          life-=1
+          print(f"You lost a life, you have {life} left")
+          if life == 0:
+                print("You have no life left")
+                gameOver = True
+                
     
     for char in chooseWord:
 
@@ -31,7 +40,7 @@ while not gameOver:
         else: 
                  display += "_"
                  
-    if userSelection not in chooseWord:
+    if userSelection not in chooseWord :
             life -= 1
             if life == 0:
                 print("You have no life left")
