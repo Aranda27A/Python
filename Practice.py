@@ -65,12 +65,57 @@ for char in pasword:
 
 print(password)
 
+
+
 #--------------------------------------------------------
 
 
 
+student_scores = {
+    'Harry': 88,
+    'Ron': 78,
+    'Hermione': 95,
+    'Draco': 75,
+    'Neville': 60
+}
+student_scores["Abraham"] = 99
+
+student_grades = {}     
+
+for student in student_scores:
+      
+    if student_scores[student] > 90:
+        student_grades[student] = "Outstanding"
+    elif student_scores[student] > 80:
+         student_grades[student]  = "Exceeds Expectations"
+    elif student_scores[student] > 70:
+         student_grades[student] = "Acceptable" 
+    else:
+      student_grades[student] = "Fail"     
+
+print(student_grades)   
+
+
 #******----------------------------------------
 
-    
+
+Mexico = {
+     "Puebla": ["Cuetzalan" , "Xicotepec" , "Tehuacan"], 
+     "Guerrero" : ["San nicolas" , "Patzcuaro"]
+} 
 
 
+print(Mexico["Puebla"][1])
+
+#-----------------------
+def is_leap_year(year):
+      if year % 400 == 0:
+          return True
+      elif year % 100 == 0:
+          return False
+      elif year % 4 == 0:
+          return True
+      else:
+          return False
+ 
+   
